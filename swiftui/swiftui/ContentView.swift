@@ -9,16 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView{
-            ProfileView()
+        TabView {
+            ProfileScreen()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
+            SettingsScreen()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
+            CounterScreen()
+                .tabItem {
+                    Label("Counter", systemImage: "plusminus")
+                }
         }
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
     }
 }
 
